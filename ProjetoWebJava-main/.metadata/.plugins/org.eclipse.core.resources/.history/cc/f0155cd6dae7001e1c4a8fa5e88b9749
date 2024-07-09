@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Contato</title>
+<link rel = "stylesheet" href="style.css" >
+</head>
+<body>
+        <form name="frmfaleconosco" method="post" action="#" onsubmit="return validaFaleConosco()">
+            <fieldset class="faleConosco">
+                <legend>Dados Pessoais</legend>
+                <label for="nome">Nome: </label>
+                <input placeholder="Nome e Sobrenome" type="text" name="txtnome" id="nome">
+                <label placeholder="(XX)XXXXX-XXXX" for="fone">Telefone: </label>
+                <input type="text" name="txtfone" id="fone">
+                <label for="email">Email: </label>
+                <input type="email" name="txtemail" id="email">
+            </fieldset>
+
+            <fieldset class="faleConosco">
+                <legend class="tituloFormMotivo">Motivo do contato:</legend>
+                <label for="Motivo">Motivo: </label>
+                <select name="selmotivo" id="Motivo" onchange="verificaMotivo(this.value)">
+                    <option value="">Escolha um motivo</option>
+                    <option value="RE">Reclamação</option>
+                    <option value="SU">Sugestão</option>
+                    <option value="PR">Informção sobre produto</option>
+                </select>
+                <div id="opcaoProduto"></div>
+                <label for="comentario">Comentário: </label>
+                <textarea name="txacomentario" id="comentario"></textarea>
+                <button type="reset" onclick="verificaMotivo(null)">Limpar</button><button type="submit">Enviar</button>
+            </fieldset>
+
+        </form>
+</body>
+</html>

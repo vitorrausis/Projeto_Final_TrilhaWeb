@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Contato</title>
+<link rel="stylesheet' href="style.css">
+</head>
+<body>
+	<form name="frmfaleconosco" method="post" action="#" onsubmit="return validaFaleConosco()">
+            <fieldset class="faleConosco">
+                <legend>Dados Pessoais</legend>
+                <label for="nome">Nome: </label>
+                <input placeholder="Nome e Sobrenome" type="text" name="txtnome" id="nome">
+                <label placeholder="(XX)XXXXX-XXXX" for="fone">Telefone: </label>
+                <input type="text" name="txtfone" id="fone">
+                <label for="email">Email: </label>
+                <input type="email" name="txtemail" id="email">
+            </fieldset>
+            <button type="reset" onclick="verificaMotivo(null)">Limpar</button><button type="submit">Enviar</button>
+      </form>
+            
+</body>
+</html>
